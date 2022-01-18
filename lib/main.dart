@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Azon Vaqtlari',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: const HomePageView(),
