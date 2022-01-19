@@ -1,8 +1,28 @@
+import 'package:adhan/provider/bottom_nav_bar_provider.dart';
 import 'package:adhan/view/screens/home/home_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      child: const MyApp(),
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => BottomNavBarProvider(),
+        )
+      ],
+    ),
+  );
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
