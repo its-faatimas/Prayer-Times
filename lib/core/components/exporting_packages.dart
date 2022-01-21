@@ -1,4 +1,3 @@
-
 // Screens
 export 'package:adhan/view/screens/home/home_page_view.dart';
 
@@ -18,5 +17,4 @@ export 'package:adhan/provider/bottom_nav_bar_provider.dart';
 // Services
 export 'package:flutter/services.dart';
 
-
-
+// Models

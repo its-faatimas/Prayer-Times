@@ -14,19 +14,23 @@ class CustomBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBar(
       selectedItemColor: Colors.teal,
       unselectedItemColor: Colors.grey,
+      currentIndex: _barProvider.currentIndex,
       onTap: _barProvider.onChanged,
       items: [
-        _setItem(AssetIcons.home, 'Home'),
-        _setItem(AssetIcons.bell, 'Alarm'),
-        _setItem(AssetIcons.calendar, 'Date'),
-        _setItem(AssetIcons.user, 'Profile'),
+        _setItem(AssetIcons.home, 'Home', 0),
+        _setItem(AssetIcons.bell, 'Alarm', 1),
+        _setItem(AssetIcons.calendar, 'Date', 2),
+        _setItem(AssetIcons.user, 'Profile', 3),
       ],
     );
   }
 
-  BottomNavigationBarItem _setItem(String assetIcon, String label) =>
+  BottomNavigationBarItem _setItem(String assetIcon, String label, int index) =>
       BottomNavigationBarItem(
-        icon: SvgPicture.asset(assetIcon),
+        icon: SvgPicture.asset(
+          assetIcon,
+          color: _barProvider.currentIndex == index ? Colors.teal : Colors.grey,
+        ),
         label: label,
       );
 }
