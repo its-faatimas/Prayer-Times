@@ -12,9 +12,9 @@ class MyBorderRadius {
     double bottomLeft = 0.0,
   }) =>
       BorderRadius.only(
-        topRight: Radius.circular(getWidth(topRight)),
-        topLeft: Radius.circular(getWidth(topLeft)),
-        bottomRight: Radius.circular(getWidth(bottomRight)),
-        bottomLeft: Radius.circular(getWidth(bottomLeft)),
+        topRight: Radius.circular(topRight),
+        topLeft: Radius.circular(topLeft),
+        bottomRight: Radius.circular(bottomRight),
+        bottomLeft: Radius.circular(bottomLeft),
       );
 }

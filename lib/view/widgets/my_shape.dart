@@ -8,16 +8,11 @@ class MyShape {
       );
 
   static RoundedRectangleBorder only({
-    double radius = 6.0,
+    BorderRadius borderRadius = BorderRadius.zero,
     BorderSide borderSide = BorderSide.none,
   }) =>
       RoundedRectangleBorder(
         side: borderSide,
-        borderRadius: MyBorderRadius.only(
-          topLeft: radius,
-          topRight: radius,
-          bottomRight: radius,
-          bottomLeft: radius,
-        ),
+        borderRadius: borderRadius,
       );
 }
