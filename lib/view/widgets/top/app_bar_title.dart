@@ -7,13 +7,15 @@ class AppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.zero,
       title: Text('Assalomu alaykum'),
-      subtitle: Text("Bahromjon Polat"),
+      subtitle: Text("Abdullohov Abdulloh"),
       trailing: Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           Icon(Icons.search),
           Icon(Icons.search),
-          Icon(Icons.search),
+          CircleAvatar()
         ],
       ),
     );
